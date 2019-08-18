@@ -1,0 +1,63 @@
+<header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-lg-2">
+          <div class="logo">
+            <a href="/">
+              <img src="/assets/img/logo_BSRK.png" style = "width : 150px;"alt="" >
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-8">
+          <nav>
+            <ul style = "font-size : 20px">
+            <% if(name === "/"){ %>
+                 <li><a  class="active" href="/">Trang Chủ</a></li> 
+            <% } else {%>
+                <li><a style = "color : white!important" href="/">Trang Chủ</a></li>
+            <%} if(name === "about"){ %>
+                <li><a style = "color : white!important" class="active" href="/about">Giới Thiệu</a></li> 
+            <% } else { %>
+                <li><a style = "color : white!important" href="/about">Giới Thiệu</a></li> 
+            <% }if(name === "courses"){ %>
+                <li><a class="active" href="/courses">Khoá Học</a></li>
+            <% } else { %>
+                <li><a style = "color : white!important" href="/courses">Khoá học</a></li>
+            <% }if(name === "career"){ %>
+                <li><a class = "active" href="/career">Tuyển Dụng</a></li>              
+            <% } else { %>
+                <li><a style = "color : white!important" href="career">Tuyển Dụng</a></li>              
+            <% }if(name === "contact"){ %>
+                <li><a class = "active" href="/contact">Liên Hệ</a>
+            <% } else { %>
+                <li><a style = "color : white!important" href="/contact">Liên Hệ</a>
+            <% }if(name === "news"){ %>
+                <li><a class = "active" href="/news">Tin Tức</a>
+            <% } else { %>
+                <li><a style = "color : white!important" href="/news">Tin Tức</a>
+            <% } %> 
+
+            </ul>
+          </nav>
+          <div class="mobile-menu">
+            <i class="ti-menu"></i>
+            <i class="ti-close"></i>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <div class="social-icon">
+            <ul>
+              <li><a href="#"><i class="ti-instagram"></i></a></li>
+              <li><a href="#"><i class="ti-facebook"></i></a></li>
+              <li><a href="#"><i class="ti-google"></i></a></li>
+              <!-- <li class="search-icon"><a href="#"><i class="ti-search"></i></a></li> -->
+            </ul>
+          </div>
+          <div class="search">
+            <input type="search" placeholder="Search...">
+            <i class="ti-close"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
