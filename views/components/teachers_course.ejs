@@ -86,22 +86,22 @@
             </button>
           </div>
           <div class="modal-body">
-              <form action="/action_page.php" class = "">
+              <form action="/register_form" method = "GET" class = "">
                 <div class="form-group">
                   <label for="fullname">Họ và Tên:</label>
-                  <input type="text" class="form-control" id="fullname" required>
+                  <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="form-group">
                   <label for="tel">Số điện Thoại:</label>
-                  <input type="tel" class="form-control" id="tel" required>
+                  <input type="tel" class="form-control" id="tel" name = "phone" required>
                 </div>
                 <div class="form-group">
                   <label for="email">Email:</label>
-                  <input type="email" class="form-control" id="email" required>
+                  <input type="email" class="form-control" id="email" name = "email" required>
                 </div>
                 <div class="form-group">
                 <label for="inputState">Khoá Học</label>
-                  <select id="inputState" class="form-control">
+                  <select id="inputState" name = "course" class="form-control">
                     <option selected>Mỗi Con Trẻ Là Một Thiên Tài</option>
                     <option>Be Real, Do Real, Have Real</option>
                     <option>QMT English</option>
@@ -111,7 +111,7 @@
                 </div>
                 <div class="form-group">
                   <label for="pwd">Đăng ký cho:</label>
-                  <input type="tel" class="form-control" id="pwd">
+                  <input type="tel" class="form-control" id="pwd" name = "for">
                 </div>
 
                 <button type="submit" class="btn btn-primary" style = "margin : auto">Đăng Ký</button>

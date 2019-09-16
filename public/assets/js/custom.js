@@ -267,13 +267,15 @@ Index
       }
     });
   });
+  setTimeout(function(){
+    $("#preloader").fadeOut(500)
+  },1000)
 
   /* window on load all function here */
   // $(window).on("load", function() {
   //   /* -----------------------------------
   //         13. loading
   //       -------------------------------------*/
-  //   $("#preloader").fadeOut(500);
   // });
-
+  
 })(jQuery);

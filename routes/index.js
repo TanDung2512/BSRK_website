@@ -166,4 +166,44 @@ router.get('/our-team/:name', function(req, res, next) {
   }
 });
 
+router.get('/register_form', function(req,res){
+  'use strict';
+  const nodemailer = require('nodemailer');
+  console.log(req.query)
+  
+  nodemailer.createTestAccount((err, account) => {
+      let transporter = nodemailer.createTransport({
+          host: 'smtp.googlemail.com', // Gmail Host
+          port: 465, // Port
+          secure: true, // this is true as port is 465
+          auth: {
+              user: '', //Gmail username
+              pass: '' // Gmail password
+          }
+      });
+  
+      let mailOptions = {
+          from: req.query.email,
+          to: 'tandung251298@gmail.com', // Recepient email address. Multiple emails can send separated by commas
+          subject: 'Đăng Ký Khoá Học',
+          text: `
+            Đăng ký khoá học cho học viên\n
+            Tên: ${req.query.name}\n
+            Phone: ${req.query.phone}\n
+            Email: ${req.query.email}\n
+            course: ${req.query.course}\n
+            Đăng ký cho: ${req.query.for}\n
+          `
+      };
+  
+      transporter.sendMail(mailOptions, (error, info) => {
+          if (error) {
+              return console.log(error);
+          }
+          res.render('courses', {name : "courses"})
+          console.log('Message sent: %s', info.messageId);
+      });
+  });
+})
+
 module.exports = router;
