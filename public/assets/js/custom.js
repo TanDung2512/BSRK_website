@@ -269,10 +269,11 @@ Index
   });
 
   /* window on load all function here */
-  $(window).on("load", function() {
-    /* -----------------------------------
-          13. loading
-        -------------------------------------*/
-    $("#preloader").fadeOut(500);
-  });
+  // $(window).on("load", function() {
+  //   /* -----------------------------------
+  //         13. loading
+  //       -------------------------------------*/
+  //   $("#preloader").fadeOut(500);
+  // });
+
 })(jQuery);
